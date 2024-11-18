@@ -27,7 +27,7 @@ def upload_file():
     filename = secure_filename(file.filename)
     file.save(os.path.join(UPLOAD_FOLDER, filename))
 
-    encrypted_link = f"http://example.com/download/{filename}"  # Replace with actual encryption logic
+    encrypted_link = f"http://localhost:3000/download/{filename}"  
     new_file = File(
         uploaded_by=identity['id'],
         file_name=filename,
